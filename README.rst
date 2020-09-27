@@ -7,7 +7,13 @@ input: array of records
 
 output: batches of input records in array format, arrays of input array
 
-spec of output: each batch is of max size 5mb, each record in batch is of max size 1mb, larger should be discarded, each contains max 500 records
+spec of output: 
+
+1. each batch is of max size 5mb
+
+2. each record in batch is of max size 1mb, larger should be discarded
+
+3. each batch contains max 500 records
 
 
 
