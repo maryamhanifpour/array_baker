@@ -20,6 +20,7 @@ if sample.txt contains ['a','b']
 
 >>> import array_maker
 
-array_maker.bake_batch('/Users/maryam/Desktop/dist/sample.txt')
-
+>>> array_maker.bake_batch('/Users/maryam/Desktop/dist/sample.txt')
 [['a', 'b']]
+
+maryammore test samples located in /samples
