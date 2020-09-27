@@ -37,14 +37,16 @@ def batch_elements(list_object, index_start):
 
 def batch_indexes(filtered):
     index_start = 0
+    index_end = 0
     index_list = []
-    while index_start < len(filtered):
+    while index_end <= len(filtered):
         index_end = batch_elements(filtered, index_start)
-        if index_end < len(filtered):
+        print(index_end)
+        if index_end <= len(filtered):
             index_list.append((index_start, index_end-1))
         else:
             index_list.append((index_start, len(filtered)))
-        index_start = index_end
+        index_start = index_end - 1
     return(index_list)
 
 
