@@ -11,16 +11,16 @@ spec of output: each batch is of max size 5mb, each record in batch is of max si
 
 
 
-input = [record1, record2, record3, ...]
+input = ['record1', 'record2', 'record3', ...]
 
-output = [[record1, record2], [record3], [record4,... record{n}]]
+output = [['record1', 'record2'], ['record3'], ['record4',... 'record{n}']]
 
 
 if sample.txt contains ['a','b']
 
 >>> import array_maker
 
->>> array_maker.bake_batch('/Users/maryam/Desktop/dist/sample.txt')
+>>> array_maker.bake_batch('${path_to_sample}/sample.txt')
 [['a', 'b']]
 
 more test samples located in /samples
