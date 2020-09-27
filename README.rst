@@ -23,4 +23,4 @@ if sample.txt contains ['a','b']
 >>> array_maker.bake_batch('/Users/maryam/Desktop/dist/sample.txt')
 [['a', 'b']]
 
-maryammore test samples located in /samples
+more test samples located in /samples
