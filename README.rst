@@ -30,3 +30,13 @@ if sample.txt contains ['a','b']
 [['a', 'b']]
 
 more test samples located in /samples
+
+>>> import array_maker
+>>> path = '/Users/maryam/Desktop/sample/sample_string.txt'
+>>> sample = array_maker.sample_reader(path)
+>>> sample_bacthes = array_maker.bake_batch(path)
+
+>>> len(sample)
+100
+>>> len(sample_bacthes)
+9
