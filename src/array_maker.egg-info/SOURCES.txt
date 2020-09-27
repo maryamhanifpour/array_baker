@@ -1,0 +1,9 @@
+README.rst
+setup.py
+src/array_maker/__init__.py
+src/array_maker/main.py
+src/array_maker/process.py
+src/array_maker.egg-info/PKG-INFO
+src/array_maker.egg-info/SOURCES.txt
+src/array_maker.egg-info/dependency_links.txt
+src/array_maker.egg-info/top_level.txt
