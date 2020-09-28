@@ -10,6 +10,8 @@ def read_sample(path):
         return(eval(sample))
 
 
+# calcuate size of object in mb if object is of string type, if the object is list of strings,
+# sums over size of strings in the list
 def get_size(object):
     if isinstance(object, str):
         size_mb = sys.getsizeof(object)/1e6
@@ -19,12 +21,13 @@ def get_size(object):
     return(size_mb)
 
 
+# records bigger than 1mb are discarded
 def size_filter(sample_list):
     filtered_list = [s for s in sample_list if get_size(s) <=1]
     return(filtered_list)
 
 
-
+# starts form index_start, batches up to 500 records in one list unless the 5mb thershold is reached, returns last index
 def batch_elements(list_object, index_start):
     for n in range(index_start, index_start + 500):
         if get_size(list_object[index_start:n]) > 5:
@@ -34,7 +37,7 @@ def batch_elements(list_object, index_start):
     return(n)
 
 
-
+# returns [(index_start1, index_end2), (index_start3, index_end4)] by mapping batch_elements function to a list of strings
 def batch_indexes(filtered):
     index_start = 0
     index_end = 0
@@ -49,7 +52,7 @@ def batch_indexes(filtered):
     return(index_list)
 
 
-
+# returns batches of array of strings using index_list from batch_indexes function
 def batch_maker(filtered, index_list):
     batches = [filtered[indx[0]:indx[1]] for indx in index_list]
     return(batches)
