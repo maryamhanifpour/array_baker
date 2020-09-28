@@ -1,5 +1,5 @@
 ====================================================
-array_maker: takes an array and covert it to arrays of arrays
+array_maker: takes an array of strings and covert it to array of arrays
 ====================================================
 
 Create a virtual environment
@@ -9,6 +9,7 @@ Create a virtual environment
 $pip install dist/array_maker-0.0.1.tar.gz
 
 
+# input and ouput format
 
 input: array of records
 
