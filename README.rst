@@ -9,7 +9,9 @@ Create a virtual environment
 $pip install dist/array_maker-0.0.1.tar.gz
 
 
-<i> input and ouput format: </i> 
+-------------------
+input and ouput format: 
+-------------------
 
 input: array of records
 
