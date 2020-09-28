@@ -50,12 +50,16 @@ and run pytest
 $pytest -v
 
 platform darwin -- Python 3.7.1, pytest-6.0.2, py-1.9.0, pluggy-0.13.1
+
 collected 10 items                                                                                                                                                                  
 
-tests/unit/test_batch_size.py ..                                                                                                                                              [ 20%]
-tests/unit/test_record_intact.py ....                                                                                                                                         [ 60%]
-tests/unit/test_record_order.py ..                                                                                                                                            [ 80%]
-tests/unit/test_record_size.py ..                                                                                                                                             [100%]
+|tests/unit/test_batch_size.py ..                           [ 20%]
 
-================================================================================ 10 passed in 15.42s ================================================================================
+|tests/unit/test_record_intact.py ....                      [ 60%]
+
+|tests/unit/test_record_order.py ..                         [ 80%]
+
+|tests/unit/test_record_size.py ..                          [100%]
+
+================ 10 passed in 15.42s ================
 
