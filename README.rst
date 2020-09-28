@@ -2,9 +2,12 @@
 array_maker: takes an array of strings and covert it to array of arrays
 ====================================================
 
-Create a virtual environment
 
->>> python setup.py sdist bdist_wheel
+-------------------
+install the package:
+-------------------
+
+Create a virtual environment
 
 $pip install dist/array_maker-0.0.1.tar.gz
 
@@ -39,7 +42,13 @@ if sample.txt contains ['a','b']
 >>> array_maker.bake_batch('${path_to_sample}/sample.txt')
 [['a', 'b']]
 
-more test samples located in /samples
+
+-------------------
+test samples:
+-------------------
+
+
+more test samples located in /samples, extract the zip files and provide the full path as input
 
 >>> import array_maker
 >>> path = '${path_to_sample}/sample.txt'
@@ -51,6 +60,10 @@ more test samples located in /samples
 >>> len(sample_bacthes)
 9
 
+
+-------------------
+test the batch meets the requirements using pytest:
+-------------------
 
 
 To test final batch meet the specs, provide the path of samples to be tested in test files in tests/unit/ by updating the path list
