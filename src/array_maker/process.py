@@ -41,7 +41,6 @@ def batch_indexes(filtered):
     index_list = []
     while index_end <= len(filtered):
         index_end = batch_elements(filtered, index_start)
-        print(index_end)
         if index_end <= len(filtered):
             index_list.append((index_start, index_end-1))
         else:
