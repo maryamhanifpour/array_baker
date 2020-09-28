@@ -2,6 +2,13 @@
 array_maker: takes an array and covert it to arrays of arrays
 ====================================================
 
+Create a virtual environment
+
+>>> python setup.py sdist bdist_wheel
+
+$pip install dist/array_maker-0.0.1.tar.gz
+
+
 
 input: array of records
 
