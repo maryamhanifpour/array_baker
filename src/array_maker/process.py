@@ -58,13 +58,33 @@ def batch_maker(filtered, index_list):
     return(batches)
 
 
-def encode_64(element):
-    element_bytes = element.encode('ascii')
-    element_base64_bytes = base64.b64encode(element_bytes)
-    return(element_base64_bytes)
 
-
-def encode_list(filtered):
-    encoded = [encode_64(s) for s in filtered]
-    return(encoded)
-
+class Batch:
+    def __init__(self, list_object, batch_size_limit, number_records_limit):
+        self.size = 0
+        self.batch = []
+        self.large_batch = []
+        self.batch_size_limit = batch_size_limit
+        self.number_records_limit = number_records_limit
+        self.iter_object = iter(list_object)
+    def batch_records(self):
+        size = self.size
+        batch = self.batch
+        large_batch = self.large_batch
+        iter_object = self.iter_object
+        batch_size_limit = self.batch_size_limit
+        number_records_limit = self.number_records_limit
+        while True:
+            try:
+                item = next(iter_object)
+                print(item)
+                size = size + get_size(item)
+                if size <= batch_size_limit or len(batch) > number_records_limit:
+                    batch.append(item)
+                else:
+                    large_batch.append(batch)
+                    batch = [item]
+            except StopIteration:
+                break
+        large_batch.append(batch)
+        return(large_batch)
