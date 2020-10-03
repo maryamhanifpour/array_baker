@@ -9,7 +9,7 @@ install the package:
 
 Create a virtual environment
 
-$pip install dist/array_maker-0.0.1.tar.gz
+$ python setup.py develop
 
 
 -------------------
